@@ -222,3 +222,171 @@ busco -i /Volumes/archive/kennylab/roseanna_kawakawa/assembly/trinity_kawakawa.T
 -o kawakawa_original_eukaryota_busco.out \
 -m tran
 screen -r 274227
+
+
+
+
+
+########## RESULTS ##########
+
+
+########################
+####### EviGene version #######
+#######################
+
+
+
+"########################################
+Stats based on ALL transcript contigs:
+########################################
+
+        Contig N10: 3444
+        Contig N20: 2269
+        Contig N30: 1493
+        Contig N40: 854
+        Contig N50: 552
+
+        Median contig length: 335
+        Average contig: 524.01
+        Total assembled bases: 135151439
+
+
+#####################################################
+## Stats based on ONLY LONGEST ISOFORM per 'GENE':
+#####################################################
+
+        Contig N10: 3345
+        Contig N20: 2147
+        Contig N30: 1310
+        Contig N40: 701
+        Contig N50: 498
+
+        Median contig length: 329
+        Average contig: 497.61
+        Total assembled bases: 121277471
+
+"
+
+##############
+##### BUSCO #######
+#################
+
+
+## eukaryota
+# The lineage dataset is: eukaryota_odb9 (Creation date: 2016-11-02, number of species: 100, number of BUSCOs: 303)
+# To reproduce this run: python /Volumes/archive/userdata/staff_users/roseannagamlen-greene/micromamba/envs/busco/bin/busco -i /Volumes/archive/kennylab/roseanna_kawakawa/annotation_evigene/trinity_kawakawa_Trinity_okaytr.fasta -o kawakawa_evigene_eukaryota_busco.out -l /Volumes/archive/kennylab/roseanna_kawakawa/eukaryota_gene_db/eukaryota_odb9/ -m tran -c 1 -sp fly
+#
+# Summarized benchmarking in BUSCO notation for file /Volumes/archive/kennylab/roseanna_kawakawa/annotation_evigene/trinity_kawakawa_Trinity_okaytr.fasta
+# BUSCO was run in mode: tran
+
+        C:94.7%[S:74.9%,D:19.8%],F:4.6%,M:0.7%,n:303
+
+        287     Complete BUSCOs (C)
+        227     Complete and single-copy BUSCOs (S)
+        60      Complete and duplicated BUSCOs (D)
+        14      Fragmented BUSCOs (F)
+        2       Missing BUSCOs (M)
+        303     Total BUSCO groups searched
+
+
+### plants
+# The lineage dataset is: viridiplantae_odb10 (Creation date: 2017-12-01, number of species: 72, number of BUSCOs: 430)
+# To reproduce this run: python /Volumes/archive/userdata/staff_users/roseannagamlen-greene/micromamba/envs/busco/bin/busco -i /Volumes/archive/kennylab/roseanna_kawakawa/annotation_evigene/trinity_kawakawa_Trinity_okaytr.fasta -o kawakawa_evigene_busco.out -l /Volumes/archive/kennylab/roseanna_kawakawa/plant_gene_db/viridiplantae_odb10/ -m tran -c 1 -sp arabidopsis
+#
+# Summarized benchmarking in BUSCO notation for file /Volumes/archive/kennylab/roseanna_kawakawa/annotation_evigene/trinity_kawakawa_Trinity_okaytr.fasta
+# BUSCO was run in mode: tran
+
+        C:87.5%[S:83.5%,D:4.0%],F:9.8%,M:2.7%,n:430
+
+        376     Complete BUSCOs (C)
+        359     Complete and single-copy BUSCOs (S)
+        17      Complete and duplicated BUSCOs (D)
+        42      Fragmented BUSCOs (F)
+        12      Missing BUSCOs (M)
+        430     Total BUSCO groups searched
+
+
+
+
+
+########################
+####### original #######
+#######################
+
+
+
+"########################################
+# Stats based on ALL transcript contigs:
+########################################
+
+        Contig N10: 4124
+        Contig N20: 2911
+        Contig N30: 2074
+        Contig N40: 1307
+        Contig N50: 648
+
+        Median contig length: 278
+        Average contig: 510.09
+        Total assembled bases: 444037971
+
+
+#####################################################
+## Stats based on ONLY LONGEST ISOFORM per 'GENE':
+#####################################################
+
+        Contig N10: 2943
+        Contig N20: 1072
+        Contig N30: 520
+        Contig N40: 397
+        Contig N50: 334
+
+        Median contig length: 264
+        Average contig: 365.90
+        Total assembled bases: 263350859"
+
+
+
+## eukaryota
+# The lineage dataset is: eukaryota_odb9 (Creation date: 2016-11-02, number of species: 100, number of BUSCOs: 303)
+# To reproduce this run: python /Volumes/archive/userdata/staff_users/roseannagamlen-greene/micromamba/envs/busco/bin/busco -i /Volumes/archive/kennylab/roseanna_kawakawa/assembly/trinity_kawakawa.Trinity.fasta -o kawakawa_original_eukaryota_busco.out -l /Volumes/archive/kennylab/roseanna_kawakawa/eukaryota_gene_db/eukaryota_odb9/ -m tran -c 1 -sp fly
+#
+# Summarized benchmarking in BUSCO notation for file /Volumes/archive/kennylab/roseanna_kawakawa/assembly/trinity_kawakawa.Trinity.fasta
+# BUSCO was run in mode: tran
+
+        C:0.0%[S:0.0%,D:0.0%],F:0.0%,M:100.0%,n:303
+
+        0       Complete BUSCOs (C)
+        0       Complete and single-copy BUSCOs (S)
+        0       Complete and duplicated BUSCOs (D)
+        0       Fragmented BUSCOs (F)
+        303     Missing BUSCOs (M)
+        303     Total BUSCO groups searched
+
+
+## plants
+# The lineage dataset is: viridiplantae_odb10 (Creation date: 2017-12-01, number of species: 72, number of BUSCOs: 430)
+# To reproduce this run: python /Volumes/archive/userdata/staff_users/roseannagamlen-greene/micromamba/envs/busco/bin/busco -i /Volumes/archive/kennylab/roseanna_kawakawa/assembly/trinity_kawakawa.Trinity.fasta -o kawakawa_original_busco.out -l /Volumes/archive/kennylab/roseanna_kawakawa/plant_gene_db/viridiplantae_odb10/ -m tran -c 1 -sp arabidopsis
+#
+# Summarized benchmarking in BUSCO notation for file /Volumes/archive/kennylab/roseanna_kawakawa/assembly/trinity_kawakawa.Trinity.fasta
+# BUSCO was run in mode: tran
+
+        C:90.3%[S:39.1%,D:51.2%],F:8.1%,M:1.6%,n:430
+
+        388     Complete BUSCOs (C)
+        168     Complete and single-copy BUSCOs (S)
+        220     Complete and duplicated BUSCOs (D)
+        35      Fragmented BUSCOs (F)
+        7       Missing BUSCOs (M)
+        430     Total BUSCO groups searched
+
+
+
+cp /Volumes/archive/kennylab/roseanna_kawakawa/busco_eu_original/run_kawakawa_original_eukaryota_busco.out/short_summary_kawakawa_original_eukaryota_busco.out.txt /Volumes/archive/kennylab/roseanna_kawakawa/BUSCO_summaries/
+
+cp /Volumes/archive/kennylab/roseanna_kawakawa/busco_original/run_kawakawa_original_busco.out/short_summary_kawakawa_original_busco.out.txt /Volumes/archive/kennylab/roseanna_kawakawa/BUSCO_summaries/
+
+cp /Volumes/archive/kennylab/roseanna_kawakawa/busco_eu_evigene/run_kawakawa_evigene_eukaryota_busco.out/short_summary_kawakawa_evigene_eukaryota_busco.out.txt /Volumes/archive/kennylab/roseanna_kawakawa/BUSCO_summaries/
+
+cp /Volumes/archive/kennylab/roseanna_kawakawa/busco_evigene/run_kawakawa_evigene_busco.out/short_summary_kawakawa_evigene_busco.out.txt /Volumes/archive/kennylab/roseanna_kawakawa/BUSCO_summaries/
+
+python3 /Volumes/archive/kennylab/roseanna_kawakawa/BUSCO_summaries/generate_plot.py –wd /Volumes/archive/kennylab/roseanna_kawakawa/BUSCO_summaries/
