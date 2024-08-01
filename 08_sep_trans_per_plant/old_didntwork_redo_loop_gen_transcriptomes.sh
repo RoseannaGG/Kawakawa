@@ -66,7 +66,7 @@ common_params="--seqType fq --max_memory 512G --CPU 32 --min_contig_length 200 -
 reads_dir="/Volumes/archive/kennylab/roseanna_kawakawa/Trimmed_reads3"
 
 # Define the output directory
-output_dir="/Volumes/archive/kennylab/roseanna_kawakawa/assemblies"
+output_dir="/Volumes/archive/kennylab/roseanna_kawakawa/plant_grouped_assemblies"
 
 # Declare an associative array to store the groups
 declare -A groups
@@ -101,4 +101,6 @@ Crtl +A+D #to exit
 
 screen -r 317301
 
-cd /Volumes/archive/kennylab/roseanna_kawakawa/assemblies
+#cancelled it...
+
+cd /Volumes/archive/kennylab/roseanna_kawakawa/plant_grouped_assemblies

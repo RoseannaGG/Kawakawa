@@ -66,7 +66,7 @@ common_params="--seqType fq --max_memory 512G --CPU 32 --min_contig_length 200 -
 reads_dir="/Volumes/archive/kennylab/roseanna_kawakawa/Trimmed_reads3"
 
 # Define the output directory
-output_dir="/Volumes/archive/kennylab/roseanna_kawakawa/plant_grouped_assemblies"
+output_dir="/Volumes/archive/kennylab/roseanna_kawakawa/assemblies"
 
 # Declare an associative array to store the groups
 declare -A groups
@@ -101,4 +101,67 @@ Crtl +A+D #to exit
 
 screen -r 317301
 
-cd /Volumes/archive/kennylab/roseanna_kawakawa/plant_grouped_assemblies
+cd /Volumes/archive/kennylab/roseanna_kawakawa/assemblies
+
+
+
+
+## try again...
+
+#!/bin/bash
+
+# Trinity command and common parameters
+trinity_cmd="/Volumes/archive/kennylab/LocalProgrammes/trinityrnaseq-v2.14.0/Trinity"
+common_params="--seqType fq --max_memory 512G --CPU 32 --min_contig_length 200 --normalize_max_read_cov 50 --full_cleanup --verbose --SS_lib_type RF"
+
+reads_dir="/Volumes/archive/kennylab/roseanna_kawakawa/Trimmed_reads3"
+
+# Define the output directory
+output_dir="/Volumes/archive/kennylab/roseanna_kawakawa/assemblies"
+
+# Function to run Trinity for a given sample group
+run_trinity() {
+    local samples="$1"
+    local output_dir="$2"
+    
+    left_files=""
+    right_files=""
+    
+    for sample in $samples; do
+        left_files+=" $reads_dir/${sample}_R1_PE.fastq.gz"
+        right_files+=" $reads_dir/${sample}_R2_PE.fastq.gz"
+    done
+    
+    "$trinity_cmd" $common_params --left "$left_files" --right "$right_files" --output "$output_dir/trinity_kawakawa"
+}
+
+# Example usage for each sample group
+run_trinity "P1A P1C" "$output_dir"
+run_trinity "P2A P2B P2C" "$output_dir"
+run_trinity "P3A P3B P3C" "$output_dir"
+run_trinity "P4A P4C" "$output_dir"
+run_trinity "P24A P24B P24C" "$output_dir"
+run_trinity "P22A P22B P22C" "$output_dir"
+run_trinity "P23A P23B P23C" "$output_dir"
+run_trinity "P20A P20C" "$output_dir"
+run_trinity "P21A P21B P21C" "$output_dir"
+run_trinity "P13A P13B P13C" "$output_dir"
+run_trinity "P17A P17B P17C" "$output_dir"
+run_trinity "P16A P16B" "$output_dir"
+run_trinity "P15A P15B P15C" "$output_dir"
+run_trinity "P14A P14B P14C" "$output_dir"
+run_trinity "P19A P19B P19C" "$output_dir"
+run_trinity "P18A P18B P18C" "$output_dir"
+run_trinity "Plant_4A Plant_4B Plant_4C" "$output_dir"
+run_trinity "Plant_2B Plant_2C" "$output_dir"
+run_trinity "Plant_3B Plant_3C" "$output_dir"
+run_trinity "Plant_1A Plant_1B Plant_1C" "$output_dir"
+
+
+
+
+Thursday, May 2, 2024: 10:10:24 CMD: mkdir -p /Volumes/archive/kennylab/roseanna_kawakawa/assemblies/trinity_kawakawa
+CMD finished (0 seconds)
+Error, cannot locate file:  cd P22A_R1_PE.fastq.gz /Volumes/archive/kennylab/roseanna_kawakawa/Trimmed_reads3/P22B_R1_PE.fastq.gz /Volumes/archive/kennylab/roseanna_kawakawa/Trimmed_reads3/P22C_R1_PE.fastq.gz at /Volumes/archive/kennylab/LocalProgrammes/trinityrnaseq-v2.14.0/Trinity line 2848.
+        main::create_full_path('ARRAY(0x213f0e0)', 1) called at /Volumes/archive/kennylab/LocalProgrammes/trinityrnaseq-v2.14.0/Trinity line 1319
+
