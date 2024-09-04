@@ -142,13 +142,16 @@ screen
 conda activate myenv
 
 
-/Volumes/archive/kennylab/LocalProgrammes/Orthofinder/OrthoFinder/orthofinder -t 64 -a 16 -T iqtree -M msa -A mafft -S diamond -I 1.5 -f /Volumes/archive/kennylab/roseanna_kawakawa/orthofinder/RenamedHeaders2
+/Volumes/archive/kennylab/LocalProgrammes/Orthofinder/OrthoFinder/orthofinder -t 32 -a 16 -T iqtree -M msa -A mafft -S diamond -I 1.5 -f /Volumes/archive/kennylab/roseanna_kawakawa/orthofinder/RenamedHeaders2
 
-screen -r 336293
+screen -r 179210
 
-# fucked up, forgot to delete Pn2.fa ... so rerun with bash but first edit speciesid file to have # in front of Pn2 (locally) then upload and replace that speciesid file in /Volumes/archive/kennylab/roseanna_kawakawa/orthofinder/RenamedHeaders2/OrthoFinder/Results_Jul31/WorkingDirectory/
+
+# OOPS - re-run with blast results as i forgot to delete Pn2.fa before running the above (to save time, rather than re-running the above) ... so rerun with bash but first edit speciesid file to have # in front of Pn2 (locally) then upload and replace that speciesid file in /Volumes/archive/kennylab/roseanna_kawakawa/orthofinder/RenamedHeaders2/OrthoFinder/Results_Jul31/WorkingDirectory/
 
 screen
 
 /Volumes/archive/kennylab/LocalProgrammes/Orthofinder/OrthoFinder/orthofinder -b /Volumes/archive/kennylab/roseanna_kawakawa/orthofinder/RenamedHeaders2/OrthoFinder/Results_Jul31/WorkingDirectory/ -t 32
 screen -r 46558
+
+##### UP TO HERE - SEPT 3RD 2024
